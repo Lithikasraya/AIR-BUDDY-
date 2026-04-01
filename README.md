@@ -1,4 +1,4 @@
-# Ether IoT - Air Quality Network
+# AIR BUDDY  - Air Quality Network
 
 A modern, premium IoT SaaS dashboard frontend built with React, Vite, and Tailwind CSS.
 
@@ -182,31 +182,10 @@ Feel free to submit issues and enhancement requests!
 
 MIT License - feel free to use this project for personal or commercial use.
 
-## 🚀 Deployment
 
-### Vercel (Recommended)
-```bash
-npm install -g vercel
-vercel
-```
 
-### Netlify
-```bash
-npm run build
-# Deploy the 'dist' folder to Netlify
-```
 
-### Docker
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["npm", "run", "preview"]
-```
+
 
 ## 💡 Tips
 
@@ -216,19 +195,7 @@ CMD ["npm", "run", "preview"]
 - Implement actual authentication with your backend
 - Use environment variables for API URLs
 
-## 🐛 Troubleshooting
 
-**Port already in use?**
-```bash
-npm run dev -- --port 3001
-```
-
-**Build errors?**
-```bash
-rm -rf node_modules package-lock.json
-npm install
-npm run build
-```
 
 **Tailwind styles not showing?**
 - Ensure Tailwind classes are in content paths in `tailwind.config.js`
