@@ -1,0 +1,66 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+
+  /* Light Mode */
+  body {
+    @apply bg-gray-50 text-gray-900;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Dark Mode */
+  .dark {
+    @apply bg-gradient-to-br from-dark-950 via-dark-900 to-dark-950 text-white;
+    color-scheme: dark;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-blue-300 dark:bg-blue-400/30 rounded;
+
+    &:hover {
+      @apply bg-blue-400 dark:bg-blue-400/50;
+    }
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply backdrop-blur-lg bg-white/50 dark:bg-dark-800/50 border border-gray-200 dark:border-dark-700/50 rounded-3xl shadow-glass;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent;
+  }
+
+  .btn-glow {
+    @apply hover:shadow-glow transition-all duration-300;
+  }
+}
+
+/* Smooth transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation for floating elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
